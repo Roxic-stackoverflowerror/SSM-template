@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--日志-->
+<!--    <settings>
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+    </settings>-->
+
+    <!--设置别名，实体所在的包名-->
+    <typeAliases>
+        <package name="com.roxic.domain"/>
+    </typeAliases>
+
+    <!--sql映射文件的位置-->
+    <mappers>
+        <!--
+        使用package的要求
+        1. mapper文件名称必须和dao接口完全一样（包括大小写）
+        2. mapper文件和dao接口必须在同一个包下
+        -->
+        <package name="com.roxic.dao"/>
+    </mappers>
+</configuration>

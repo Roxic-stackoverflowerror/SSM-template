@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.roxic.dao.EmploeeDao">
+    <select id="selectEmploees" resultType="com.roxic.domain.Emploee">
+    select empno,ename,job jobName ,ifnull(mgr,0) mgr ,hiredate,sal salary ,IFNULL(comm,0) comm,deptno from emp order by sal
+  </select>
+
+    <insert id="insertEmploees" parameterType="com.roxic.domain.Emploee">
+    insert into emp (empno,ename,job,mgr,hiredate,sal,comm,deptno) values (#{empno},#{ename},#{jobName},#{mgr},#{hireDate},#{salary},#{comm},#{deptno})
+  </insert>
+
+    <delete id="deleteEmploees" parameterType="java.lang.Integer">
+    delete from emp where empno = #{empno}
+  </delete>
+</mapper>

@@ -1,0 +1,13 @@
+SSM整合开发
+SSM：SpringMVC+Spring+Mybatis
+
+SpringMVC：视图层，界面层。负责接收请求，显示处理结果。
+Spring：业务层，管理service，dao，工具类的对象。
+Mybatis：持久层，访问数据库。
+
+用户发起请求→SpringMVC接收→Spring中的Service对象→Mybatis处理数据
+
+SSM整合中有很多容器
+1. 第一个容器SpringMVC容器，管理Controller控制器对象。
+2. 第二个容器Spring容器，管理Service，Dao，工具类对象。
+开发人员要做的就是把合适的对象交给合适的容器创建，管理。
